@@ -1,0 +1,24 @@
+.aboutUsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .imageContainer {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .aboutImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .imageContainer:hover .aboutImage {
+    transform: scale(1.1);
+  }
+  

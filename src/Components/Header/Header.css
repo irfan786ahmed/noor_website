@@ -1,0 +1,11 @@
+.last-btn{
+    background-color: #f1c52b;
+    color: var(--main-clr) !important;
+    padding: 5px 15px !important;
+    border-radius: 20px;
+    font-weight: 900;
+    text-align: center;
+}
+.last-btn:hover{
+    color: white !important;
+}

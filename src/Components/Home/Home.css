@@ -1,0 +1,481 @@
+/*Desktop View*/
+.frontPageImage {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.jk {
+  position: absolute;
+  top: 0;
+  z-index: -5;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 40px;
+  height: 80px;
+  z-index: 5;
+}
+
+.logo-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  border-radius: 50px;
+  margin: 0 auto;
+  padding: 5px 15px;
+  margin-top: 40px;
+  background: rgba(94, 82, 156, 0.27);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  /* backdrop-filter: blur(1.8px); */
+  /* -webkit-backdrop-filter: blur(1.8px); */
+  border: 1px solid rgba(94, 82, 156, 0.65);
+  ;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: 45px;
+  height: 45px;
+}
+
+.nav-options {
+  padding-left: 25px;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-gap: 50px;
+  list-style-type: none;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+.option {
+  padding: 5px 0px;
+  font-weight: 600;
+  font-size: large;
+  color: white;
+}
+
+.mobile-option {
+  display: none;
+}
+
+.option :hover {
+  color: var(--main-clr);
+}
+
+li p {
+  margin-bottom: 0;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.mainHeading {
+  position: relative;
+}
+
+.underline {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -5px;
+  /* Adjust this value to control the distance from the text */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  /* Adjust this value to control the width of the underline */
+  height: 3px;
+  /* Adjust this value to control the thickness of the underline */
+  background-color: var(--secondary-clr);
+  /* Adjust this value to set the color of the underline */
+}
+
+@media (max-width: 648px) {
+
+  /*Mobile View */
+  .frontPageImage {
+    height: 55vh;
+  }
+
+  .header {
+    padding: 0px 10px;
+  }
+
+  .logo {
+    width: 45px;
+    height: 45px;
+  }
+  .last-btn{
+    width: 90%;
+    margin: 0 auto;
+  }
+  .responseSize{
+    font-size: 35px !important;
+  }
+  .responseImage{
+    width: 100% !important;
+  }
+.hideImages{
+  display: none !important;
+}
+  .nav-options {
+    display: flex;
+    width: 100%;
+    height: 350px;
+    position: absolute;
+    top: 120px;
+    left: -100%;
+    opacity: 0;
+    transition: all 0.5s ease;
+    flex-direction: column;
+    list-style-type: none;
+    grid-gap: 0px;
+  }
+
+  .nav-options.active {
+    background: var(--main-clr);
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+    align-content: center;
+    padding-left: 0px;
+  }
+
+  .menu-icon {
+    width: 55px;
+    height: 60px;
+    margin-top: 40px;
+  }
+
+  .option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vw;
+    padding: 30px 0px;
+  }
+
+  .visit__imagePart img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .visitTodayHeading {
+    font-size: 35px !important;
+  }
+
+  .whyImage {
+    height: 300px;
+  }
+  .detailedBox{
+    width: 90% !important;
+  }
+  .fontSizeChange{
+    font-size: 35px !important;
+  }
+}
+
+.mobile-menu {
+  display: block;
+}
+
+
+.content-wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.news-card {
+  border: 0px solid aqua;
+  margin: 0.5rem;
+  position: relative;
+  height: 14rem;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  flex: 1;
+  min-width: 290px;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+}
+
+.news-card__card-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.news-card__image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 3s ease;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: relative;
+  z-index: -1;
+}
+
+.news-card__text-wrapper {
+  position: absolute;
+  bottom: 0rem;
+  padding: 1rem;
+  color: white;
+  transition: background-color 1.5s ease;
+}
+
+.news-card:hover .news-card__text-wrapper {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.news-card__title {
+  transition: color 1s ease;
+  margin-bottom: 0.5rem;
+}
+
+.news-card:hover .news-card__title {
+  color: var(--secondary-clr);
+}
+
+.news-card__post-date {
+  font-size: 0.7rem;
+  margin-bottom: 0.5rem;
+  color: #CCC;
+}
+
+.news-card__details-wrapper {
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 1.5s ease, opacity 1s ease;
+}
+
+.news-card:hover .news-card__details-wrapper {
+  max-height: 20rem;
+  /* Adjust the height as needed */
+  opacity: 1;
+}
+
+.news-card__excerpt {
+  font-weight: 300;
+}
+
+.news-card__read-more {
+  background: black;
+  color: #bbb;
+  display: block;
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.3rem;
+  margin-top: 1rem;
+  border: 1px solid #444;
+  font-size: 0.8rem;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  text-decoration: none;
+  width: 7rem;
+  margin-left: auto;
+  position: relative;
+  z-index: 5;
+}
+
+.news-card__read-more i {
+  position: relative;
+  left: 0.2rem;
+  color: #888;
+  transition: left 0.5s ease, color 0.6s ease;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.news-card__read-more:hover i {
+  left: 0.5rem;
+  color: var(--secondary-clr);
+}
+
+.divider {
+  display: flex;
+}
+
+.divider:before,
+.divider:after {
+  content: "";
+  flex: 1;
+}
+
+.visit__contactbtn {
+  padding: 10px;
+  background-color: var(--secondary-clr);
+  color: black;
+  font-weight: 500;
+  width: 150px;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.beforeafterSection {
+  /* background: url("/public/dentalBackground.png"); */
+  background-color: var(--main-clr);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 15px;
+}
+
+.whynoorClinicSection {
+  width: 100%;
+}
+
+/* smileExpertPart */
+.smileExpertCard {
+  width: 24rem;
+  height: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  color: black;
+  box-shadow: 0 10px 20px 2px var(--light-clr);
+
+  img {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.9;
+    transition: opacity .2s ease-out;
+  }
+
+  h2 {
+    position: absolute;
+    inset: auto auto 30px 30px;
+    margin: 0;
+    transition: inset .3s .3s ease-out;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+
+  p,
+  a {
+    position: absolute;
+    opacity: 0;
+    max-width: 80%;
+    transition: opacity .3s ease-out;
+  }
+
+  p {
+    inset: auto auto 80px 30px;
+  }
+
+  a {
+    inset: auto auto 40px 30px;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &:hover h2 {
+    inset: auto auto 220px 30px;
+    transition: inset .3s ease-out;
+  }
+
+  &:hover p,
+  &:hover a {
+    opacity: 1;
+    transition: opacity .5s .1s ease-in;
+  }
+
+  &:hover img {
+    transition: opacity .3s ease-in;
+    opacity: 1;
+  }
+
+}
+
+.material-symbols-outlined {
+  vertical-align: middle;
+}
+
+/* smileExpertEnd */
+.scrollWalaPart {
+  color: var(--main-clr);
+}
+
+.detailedBox {
+  width: 60%;
+  border: 1px solid var(--main-clr);
+  padding: 25px;
+  border-radius: 15px;
+  color: var(--main-clr);
+}
+
+.purpleIcons {
+  color: var(--main-clr) !important;
+  font-size: 80px;
+}
+/* Define different keyframe animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Apply animation properties */
+.animated {
+  animation-duration: 3s;
+  animation-fill-mode: both;
+}
+
+/* Assign different animation names to each detailed box */
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+.slideInLeft {
+  animation-name: slideInLeft;
+}
+.bgDental{
+  background: url(/public/dentalBackground.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+
